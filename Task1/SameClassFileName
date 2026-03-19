@@ -1,0 +1,5 @@
+Why class name and file name should be same
+
+In Java, the source file and public class should be the same.
+This helps the Java compiler and JVM to quickly and consistently locate the correct class files during compilation and execution.
+(Easy identification and compilation)

@@ -1,0 +1,9 @@
+Data Type   	Size	                   Range
+byte	    1 byte (8 bits)	        -128 to 127 (−2⁷ to 2⁷−1)
+short	    2 bytes (16 bits)	    -32,768 to 32,767 (−2¹⁵ to 2¹⁵−1)
+int	        4 bytes (32 bits)	    -2,147,483,648 to 2,147,483,647 (−2³¹ to 2³¹−1)
+long	    8 bytes (64 bits)	    -2⁶³ to 2⁶³−1
+float	    4 bytes	                ~ ±3.4 × 10³⁸ (6-7 decimal digits precision)
+double	    8 bytes	                ~ ±1.7 × 10³⁰⁸ (15 decimal digits precision)
+char	    2 bytes	                0 to 65,535 (Unicode values)
+boolean		true or false

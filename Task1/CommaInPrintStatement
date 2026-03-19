@@ -1,0 +1,4 @@
+Purpose of comma (,) in print statement
+
+In Java printf(), a comma is used as a formatting flag to display numbers with thousands separators.
+This makes large numbers easier to read.
