@@ -1,0 +1,26 @@
+1. Use String
+When:
+Value does NOT change (immutable)
+Mostly read-only data
+Small operations
+
+String name = "Anu";
+System.out.println(name.toUpperCase());
+
+2. Use StringBuilder
+When:
+Many modifications needed
+Single-threaded program (most cases)
+Performance matters 
+
+StringBuilder sb = new StringBuilder();
+sb.append("Hello");
+sb.append(" World");
+
+3. Use StringBuffer
+When:
+Multi-threading is involved
+Thread safety is required
+
+StringBuffer sb = new StringBuffer("Hello");
+sb.append(" Safe");
