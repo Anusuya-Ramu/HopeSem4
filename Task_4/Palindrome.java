@@ -1,4 +1,4 @@
-package Task4;
+package Task_4;
 
 public class Palindrome {
     public static boolean isPalindrome(String s) {
