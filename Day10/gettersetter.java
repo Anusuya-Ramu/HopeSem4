@@ -1,5 +1,4 @@
 package Day10;
-
 class Name{
   private String name;
   public void setname(String name){
