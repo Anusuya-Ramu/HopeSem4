@@ -1,0 +1,43 @@
+it is accomplished or not accomplished exception with reason
+
+    try {
+            int a = 10/0;
+    } catch (Exception e) {
+            System.out.println("Can't divide by zero " + e);
+    } catch (ArithmeticException ex) {
+            System.out.println("Can't divide by zero " + ex);
+    }
+
+
+In Java, catch blocks must be ordered from specific → general
+
+But in this code:
+catch (Exception e)   //General exception
+catch (ArithmeticException ex)  //Specific exception
+
+Exception is the parent class
+ArithmeticException is the child class
+
+So the first catch block:
+catch (Exception e)
+will already catch ALL exceptions, including ArithmeticException.
+
+That makes the second catch block unreachable
+Compile-Time Error
+
+Java will give error like:
+Unreachable catch block for ArithmeticException
+
+
+Correct Code
+try {
+    int a = 10 / 0;
+} catch (ArithmeticException ex) {
+    System.out.println("Can't divide by zero " + ex);
+} catch (Exception e) {
+    System.out.println("General exception " + e);
+}
+Output
+Can't divide by zero java.lang.ArithmeticException: / by zero
+
+Not accomplished because the general exception (Exception) is placed before the specific exception (ArithmeticException), making the later catch block unreachable.
