@@ -1,0 +1,48 @@
+Integer and Float Wrapper Class Caching in Java
+1. Integer Caching Concept**
+
+In Java, the `Integer` wrapper class uses a caching mechanism for better performance and memory optimization.
+
+Java caches `Integer` objects in the range -128 to 127. When values within this range are assigned, both variables refer to the same object in memory.
+
+Integer a = -128;
+Integer b = -128;
+System.out.println(a == b); // true
+
+In this case, `a` and `b` refer to the same cached object, so `==` returns `true`.
+However, values outside this range are not cached:
+
+
+Integer a = 128;
+Integer b = 128;
+System.out.println(a == b); // false
+
+Here, two separate objects are created, so `==` returns `false` because it compares memory references.
+
+2. Float (and Double) Behavior
+Unlike `Integer`, the `Float` wrapper class does not use caching.
+Float a = -127.5f;
+Float b = -127.5f;
+System.out.println(a == b); // false
+
+Even though the values are the same, `a` and `b` refer to different objects, so `==` returns `false`.
+
+3. Why Float Does Not Use Caching
+
+There are several reasons why `Float` and `Double` do not use caching:
+* Large Range of Values
+* Precision Issues
+* Low Reusability
+* Memory Inefficiency
+
+4. Important Note on Comparison
+
+* == compares memory references for objects.
+* .equals() compares actual values.
+
+Correct way to compare:
+System.out.println(a.equals(b)); //true
+
+* Integer uses caching for values between -128 and 127, improving performance and memory usage.
+* Float and Double do not use caching due to their large range, precision limitations, and inefficiency in reuse.
+* Always use .equals() for comparing wrapper class values instead of ==.
